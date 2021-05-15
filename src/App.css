@@ -1,0 +1,29 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+
+.App{
+		max-height: 100vh;
+
+}
+
+.in_stock{
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Poppins';
+	color: green;
+}
+
+.not_in_stock{
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Poppins';
+	color: red;
+}

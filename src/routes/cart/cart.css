@@ -1,0 +1,131 @@
+.cart{
+	padding: 16px;
+	background-color: #f8f8f8;
+	font-family: 'Poppins';
+}
+
+.cart_head{
+	padding: 16px;
+
+}
+
+.cart_head>h1{
+	font-family: 'Poppins';
+	font-size: 25px;
+}
+
+
+.cart_grid_main{
+	display: grid;
+	grid-template-columns: 6fr 3fr;
+	grid-gap: 16px;
+}
+
+
+
+@media(max-width:800px){
+	.cart_grid_main{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+
+.cart_comp_head>img{
+	width: 200px;
+}
+
+
+
+.cart_content{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.cart_comp{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding:16px;
+	margin: 16px;
+	background-color: #fff;
+}
+
+.button_cart{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+}
+
+.button_cart>p{
+	color: #000;
+}
+
+.button_cart>.MuiIconButton-root{
+	margin-right: 16px;
+	margin-left: 16px;
+}
+
+@media(max-width:900px){
+	.cart_comp{
+		display:flex;
+		flex-direction: column;
+	}
+	.cart_content{
+
+		text-align: left;
+	}
+}
+
+
+
+.cart_total_list{
+	background-color: #fff;
+}
+
+.cart_total_comp{
+	margin:16px;
+	padding:16px;
+}
+
+
+.rem_cart>p{
+	font-size: 16px;
+	color: #f03;
+	cursor: pointer;
+}
+
+.rem_cart>p:hover{
+	color: #a03;
+}
+
+.empty{
+	padding:16px;
+	margin:16px;
+	text-align: center;
+}
+
+.checkout_flex{
+	display: flex;
+	flex-direction: column;
+	padding:16px;
+	align-items: center;
+}
+
+.checkout_flex>button{
+	width: 100%;
+	padding:16px;
+	font-size: 18px;
+	color:#fff;
+	outline-width: 0px;
+	background-color: #8403fc;
+	border-width: 0px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.checkout_flex>button:hover{
+	background-color: #aa55fa;
+}

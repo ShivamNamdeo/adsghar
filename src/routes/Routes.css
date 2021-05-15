@@ -1,0 +1,187 @@
+/**Post Now**/
+
+.navigation{
+	
+
+}
+.navigation>h1{
+	padding: 20px;
+	font-size: 12px;
+	font-weight: 400;
+	background-color: #f0f3f5;
+}
+
+.form_heading{
+	padding: 16px;
+}
+
+.form_heading>h1{
+	font-size: 30px;
+	color: #fff;
+}
+
+.form_heading>h2{
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.form_heading>h3{
+	font-size: 14px;
+	color: #fff;
+	font-weight: 400;
+}
+.form_heading>img{
+	width:80%;
+}
+
+.form{
+	display: grid;
+  	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+	align-items: center;
+	background: rgb(198,63,251);
+	background: radial-gradient(circle, rgba(198,63,251,1) 0%, rgba(112,83,212,1) 100%);
+}
+
+
+.flex_button{
+	display: flex;
+	flex-direction: row;
+	padding: 18px;
+	justify-content: space-between;
+}
+
+
+.form>form{
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+}
+
+.form>form>input{
+	padding: 20px;
+	font-size: 20px;
+	margin-top: 16px;
+	background-color: #fff;
+	outline-width: 0px;
+	border-width: 0px;
+}
+
+.form>form>button{
+	background-color: #fff;
+	margin-top: 20px;
+	align-self: flex-start;
+	margin-left: 12px;
+	padding: 16px;
+}
+
+.form>form>button:hover{
+	background-color: #000;
+	color: #fff;	
+
+}
+
+
+/****FAQ ****/
+
+.flex_between{
+	display: grid;
+  	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  	padding: 16px;
+}
+
+.flex_between>h1{
+	
+	color:#Fff;	
+
+}
+
+.flex_between>input{
+	padding: 16px;
+	font-size: 16px;
+}
+
+.faq_flex{
+
+	align-items: center;
+	background: rgb(198,63,251);
+	background: radial-gradient(circle, rgba(198,63,251,1) 0%, rgba(112,83,212,1) 100%);
+}
+
+.faq_list{
+	display: flex;
+	flex-direction: column;
+	padding: 6px;
+
+}
+
+.ques{
+	margin-bottom:10px;
+	border:1px solid #4444;
+}
+
+.ques>h2{
+	color: #fff;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+}
+
+
+
+/***Login Flex**/
+
+.login_flex{
+
+	text-align: center;
+	align-items: center;
+}
+
+.login_child{
+
+	background: rgb(198,63,251);
+	background: radial-gradient(circle, rgba(198,63,251,1) 0%, rgba(112,83,212,1) 100%);
+	align-items: center;
+ 	height: 100%;
+  	background-position: flex-start;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.login_child>form{
+	background-color: #fff;
+	box-shadow: 0px 0px 4px -4px #2e81f5;
+	margin:16px;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+}
+
+.login_child>form>h1{
+	text-align: center;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+
+.login_child>form>input{
+	padding: 16px;
+	margin:16px;
+	border:1px solid #ccc;
+}
+
+.login_child>form>button{
+	padding: 16px;
+	margin:16px;
+	background-color: #ccc;
+}
+
+.login_child>form>button:hover{
+	
+	background-color: #000;
+	color: #fff;
+}
