@@ -131,7 +131,14 @@ function HeaderComp() {
 			
 			<Link to="/CartScreen">
       		<Tooltip title="Cart">
-      			<CartButton />
+      			{
+      				currentUser?
+      				<CartButton />
+      				:
+      				<IconButton>
+      				<ShoppingCartIcon />
+      				</IconButton>
+      			}
       		</Tooltip>
       		
       		</Link>

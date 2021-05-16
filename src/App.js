@@ -15,8 +15,7 @@ import BlogScreen from "./routes/blogs/BlogScreen";
 import ReadMoreBlogScreen from "./routes/blogs/ReadMoreBlogScreen";
 import StoreScreen from "./routes/store/StoreScreen";
 import CartScreen from "./routes/cart/CartScreen";
-
-
+import CheckoutScreen from "./routes/checkout/CheckoutScreen";
 
 
 
@@ -46,6 +45,7 @@ const App = () => {
           <Route exact path="/BlogScreen" component={BlogScreen }/>
           <Route exact path="/ReadMoreBlogScreen/:blog_id" component={ReadMoreBlogScreen }/>
            <PrivateRoute exact path="/CartScreen" component={CartScreen }/>
+           <PrivateRoute exact path="/CheckoutScreen" component={CheckoutScreen }/>
           
           
           

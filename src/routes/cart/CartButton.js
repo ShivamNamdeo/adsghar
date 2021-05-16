@@ -25,9 +25,9 @@ export default function CartButton() {
   const [cart_list, set_cart_list] = useState([]);
   
   useEffect(() => {
-
-    if(currentUser.email){
-      const subscriber = firebase.firestore()
+    
+    
+    const subscriber = firebase.firestore()
       .collection("users")
       .doc(currentUser.email)
       .collection("cart")
@@ -42,9 +42,6 @@ export default function CartButton() {
       });
   
     return () => subscriber();
-    }
-
-    
   
    }, []); 
 

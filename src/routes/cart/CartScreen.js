@@ -224,9 +224,13 @@ if(cart_list ==[] || total_items == 0){
 							</div>
 
 
+							<Link to="/CheckoutScreen">
 							<div className="checkout_flex">
-								<Button>Checkout</Button>
+								
+									<Button>Checkout</Button>
+								
 							</div>
+							</Link>
 						</div>
 					
 					</div>	
