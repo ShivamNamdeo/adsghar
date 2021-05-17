@@ -11,12 +11,11 @@ import firebase from './../../base';
 import Loading  from "../comp/Loading";
 import { AuthContext } from "./../../Auth";
 import moment from "moment";
-import GetProductComp from "./GetProductComp";
+import ShopOrderComp from "./ShopOrderComp";
 
 
 
-
-function DashOrderComp() {
+function DashVendorOrderComp() {
 
 	const [order_list, set_order_list] = useState([]);
 	const [loading, setLoading] = useState(true);
@@ -28,7 +27,7 @@ function DashOrderComp() {
     const subscriber = firebase.firestore()
       .collection("users")
       .doc(currentUser.email)
-      .collection("buy_order")
+      .collection("sell_order")
       .orderBy('timestamp','desc')
       .onSnapshot(querySnapshot => {
         const order_list_ = [];
@@ -71,7 +70,7 @@ if(loading){
 		<div className="dash_comp">
 
 			<div className="comp_heading">
-				<h1>Your Orders</h1>
+				<h1>Your Shop Orders</h1>
 			</div>
 
 			<div className="comp_heading">
@@ -94,7 +93,8 @@ if(loading){
 
 					</div>
 
-					<GetProductComp order_id={item.order_id}/>
+					<ShopOrderComp order_id={item.order_id} />
+
 				</div>
 
 
@@ -109,4 +109,4 @@ if(loading){
 	)
 }
 
-export default DashOrderComp
+export default DashVendorOrderComp

@@ -5,7 +5,7 @@ import DashBlogComp  from "./DashBlogComp";
 import DashOrderComp  from "./DashOrderComp";
 import DashFeedBackComp  from "./DashFeedBackComp";
 import DashActComp  from "./DashActComp";
-
+import DashVendorOrderComp from "./DashVendorOrderComp";
 
 
 function DashSwitchComp({ren_comp}) {
@@ -20,6 +20,8 @@ function DashSwitchComp({ren_comp}) {
 			return (<DashBlogComp />);
 		case "order":
 			return(<DashOrderComp />);
+		case "shop_order":
+			return(<DashVendorOrderComp />);
 		case "feedback":
 			return(<DashFeedBackComp />);
 

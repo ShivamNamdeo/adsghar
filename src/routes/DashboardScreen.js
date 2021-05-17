@@ -110,9 +110,11 @@ function DashboardScreen() {
            <Tab label="Articles"onClick={()=>set_ren_comp("blog")} icon={<DescriptionIcon />} {...a11yProps(2)} />
 
 
-          <Tab label="Orders" onClick={()=>set_ren_comp("order")} icon={<ShoppingBasket />} {...a11yProps(3)} />
-          <Tab label="Activity" onClick={()=>set_ren_comp("activity")}icon={<HelpIcon />} {...a11yProps(4)} />
-          <Tab label="Feedback" onClick={()=>set_ren_comp("feedback")} icon={<HelpIcon />} {...a11yProps(5)} />
+          <Tab label="My Orders" onClick={()=>set_ren_comp("order")} icon={<ShoppingBasket />} {...a11yProps(3)} />
+          <Tab label="Shop Orders" onClick={()=>set_ren_comp("shop_order")} icon={<ShoppingBasket />} {...a11yProps(4)} />
+
+          <Tab label="Activity" onClick={()=>set_ren_comp("activity")}icon={<HelpIcon />} {...a11yProps(5)} />
+          <Tab label="Feedback" onClick={()=>set_ren_comp("feedback")} icon={<HelpIcon />} {...a11yProps(6)} />
         </Tabs>
       </AppBar>
      
@@ -126,7 +128,11 @@ function DashboardScreen() {
           <MenuItem onClick={()=>set_ren_comp("product")}>Product List</MenuItem>
           <MenuItem onClick={()=>set_ren_comp("activity")}>Activity</MenuItem>
           <MenuItem onClick={()=>set_ren_comp("blog")}>Blogs</MenuItem>
-          <MenuItem onClick={()=>set_ren_comp("order")}>Orders</MenuItem>
+          <MenuItem onClick={()=>set_ren_comp("order")}>My Orders</MenuItem>
+          <MenuItem onClick={()=>set_ren_comp("shop_order")}>Shop Orders</MenuItem>
+
+
+
           <MenuItem onClick={()=>set_ren_comp("feedback")}>Feedback</MenuItem>
 
           <div className="col">

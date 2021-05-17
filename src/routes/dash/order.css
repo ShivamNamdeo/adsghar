@@ -1,0 +1,23 @@
+.address_user_comp>p{
+	margin-bottom: 5px;
+	color: #666;
+	font-size: 12px;
+	font-family: 'Poppins';
+	margin-right: 16px;
+
+}
+
+.address_head>h4{
+	padding:16px;
+	padding-left: 0px;
+	font-size: 14px;
+	font-family: 'Poppins';
+	color: #789;
+}
+
+.address_user_row{
+	display: flex;
+	flex-direction: row;
+	
+	padding:16px;
+}

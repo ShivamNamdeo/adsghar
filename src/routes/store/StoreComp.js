@@ -48,7 +48,9 @@ function StoreComp({comp}) {
                 .collection('cart')
                 .doc(comp.key)
                 .set({
-                 
+                 	
+
+                 	vendor_email:comp.user_email,
                 	product_price:comp.product_price,
                 	product_id:comp.key,
                 	quantity:1,

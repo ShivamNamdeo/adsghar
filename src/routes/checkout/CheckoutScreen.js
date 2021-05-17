@@ -14,9 +14,11 @@ import { AuthContext } from "./../../Auth";
 import EditIcon from '@material-ui/icons/Edit';
 import TextField from '@material-ui/core/TextField';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
-
-
+import {useHistory} from "react-router";
+	
 function CheckoutScreen() {
+
+	const history = useHistory();
 
 	const {currentUser} = useContext(AuthContext);
 	const [loading, setLoading] = useState(true);
@@ -36,6 +38,8 @@ function CheckoutScreen() {
 
 	const [mark_address, set_mark_address] = useState("");
 
+
+	const [checkout_done, set_checkout_done] = useState(false);
 
 	const [address, set_address] = useState("");
 
@@ -100,6 +104,42 @@ function CheckoutScreen() {
 
 const make_address = ()=>{
 	set_edit_address_id(Date.now()+"");
+}
+
+
+const checkout_done_fun = ()=>{
+
+			if(mark_address){
+				set_checkout_done(true);
+
+				return new Promise((res, rej) => {
+                firebase.firestore()
+                .collection('users')
+                .doc(currentUser.email)
+                .collection('address')
+                .doc(mark_address)
+                .set({
+                    latest:true,
+                },{ merge: true })
+                    .then(ref => {
+                   
+                    history.push("./SelectPayMethod");
+                    res(ref);                    
+                })
+                .catch(error => {
+                    rej(error);
+                })
+       		 })
+
+				
+			}else{
+				alert("Please modify your address");
+			}
+	
+
+	
+
+	
 }
 
 
@@ -177,6 +217,8 @@ if(loading){
 		<Loading />
 	)
 }
+
+
 
 if(cart_list ==[] || total_items == 0){
 	return(
@@ -257,7 +299,6 @@ if(cart_list ==[] || total_items == 0){
 													<div className="button_checkout">
 
 														<IconButton onClick={()=>edit_address(item)}><EditIcon /></IconButton>
-														<IconButton onClick={()=>delete_address(item.key)}><DeleteIcon /></IconButton>
 														<IconButton onClick={()=>set_mark_address(item.key)}><CheckCircleOutlineIcon color={item.key == mark_address ? "primary" :" secondary"}/></IconButton>
 
 
@@ -301,13 +342,14 @@ if(cart_list ==[] || total_items == 0){
 							</div>
 
 
-							<Link to="/CheckoutScreen">
+							
 							<div className="checkout_flex">
 								
-									<Button>Confirm Order</Button>
+									<Button onClick={()=>checkout_done_fun()}>Confirm Order</Button>
 								
 							</div>
-							</Link>
+
+							
 						</div>
 					
 					</div>	

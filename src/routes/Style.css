@@ -289,7 +289,9 @@ form>.MuiTextField-root{
 
 /****OrderComp**/
 
-
+.bottom_fun{
+	margin-top: 10px;
+}
 
 .order_list{
 	display: flex;
@@ -298,19 +300,19 @@ form>.MuiTextField-root{
 
 }
 .dash_order{
-	border:1px solid #ccc;
 	padding: 16px;
-
-	border-radius: 8px;
+	background-color: #f8f8f8;
 	margin-bottom: 16px;
-	background-color: #fff;
 	cursor: pointer;
 }
 
-.dash_order:hover{
-		box-shadow: 0px 0px 5px -2px #2e81f5;
-
+.order_data{
+	padding:16px;
+	background-color: #f0f3f5;
+	margin-bottom: 8px;
 }
+
+
 
 .order_head{
 	display: flex;
@@ -320,14 +322,34 @@ form>.MuiTextField-root{
 }
 .order_details{
 	display: grid;
-  	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  	word-break: break-all;
+  	grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
   	grid-gap: 8px;
   	text-align:left;
+  	word-break: break-all;
+
 }
 .order_details>img{
-	width: 200px;
+	width:100px;
 	border-radius: 8px;
+}
+
+.order_details>p{
+	font-size: 12px;
+	text-align:left;
+	padding-left: 16px;
+
+	color: #789;
+}
+
+.shop_order_details{
+	margin-bottom: 8px;
+}
+
+.shop_order_details>p{
+	margin-bottom: 5px;
+	color: #000;
+	font-size: 12px;
+	font-family: 'Poppins';
 }
 
 .order_details>h1{
@@ -336,7 +358,7 @@ form>.MuiTextField-root{
 }
 .order_details>h2{
 	font-size: 14px;
-	color: #666;
+	color: #000;
 	font-weight: 400;
 }
 
@@ -345,13 +367,16 @@ form>.MuiTextField-root{
 }
 
 .order_details>div>h1{
-	font-size: 16px;
-	color: #444;
+	color: #000;
+	font-size: 12px;
+	font-weight: 300;
+	font-family: 'Poppins';
 }
 .order_details>div>h2{
-	font-size: 14px;
-	color: #666;
-	font-weight: 400;
+	color: #000;
+	font-size: 12px;
+	font-family: 'Poppins';
+	font-weight: 300;
 }
 
 
